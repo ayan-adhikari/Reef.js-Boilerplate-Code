@@ -1,4 +1,4 @@
-# Website Boilerplate Code
+# Reef.js Boilerplate Code
 ---
 This is some reef.js and css boilerplate code to create projects faster. It includes a colour scheme template and some useful premade classes. 
 
