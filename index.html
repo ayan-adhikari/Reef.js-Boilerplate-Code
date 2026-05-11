@@ -32,32 +32,14 @@
         <link rel="stylesheet" href="css-files\loader.css" />
 
         <!-- JS -->
-        <script src="js-file/script.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/reefjs@13/dist/reef.min.js"></script> <!--Get the latest reef.js version-->
+        <script src="js-files/app.js" defer></script>
         <script src="js-files/base.js" defer></script>
+        <script src="js-files/script.js" defer></script>
+        
     </head>
 
     <body class="text main-bg white-bg" id="body">
-        <!--Main content-->
-        <div id="page-content" class="hidden">
-            <!-- Header -->
-            <header class="header">
-                <h1>Header</h1>
-            </header>
-            <!-- Main Content -->
-            <main class="main secondary-bg">
-                <!-- Add content here -->
-            </main>
-        </div>
-
-        <!--Loading Screen-->
-        <div id="loading-screen" class="flexbox">
-            <div id="loader-wrapper" class="flexbox">
-                <div id="outer-loader" class="flexbox">
-                    <div id="middle-loader" class="flexbox">
-                        <div id="inner-loader" class="flexbox"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div id="app"></div> 
     </body>
 </html>

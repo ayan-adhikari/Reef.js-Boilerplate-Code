@@ -2,8 +2,8 @@
 //Variables
 let mode = 'light';
 const root = document.documentElement; //Assigning root element to root variable
-window.addEventListener(`load`, pageLoaded)
-function pageLoaded()
+window.addEventListener(`load`, loadPage)
+function loadPage()
 {
   //Arrow function for setting up stuff for light and dark mode
   setTimeout(() => {
@@ -27,19 +27,11 @@ function pageLoaded()
   }, 1);
   //Arrow function for changing from loading screen to regular screen
   setTimeout(() => {
-    console.log(`Page loaded`)
     //Hide main loading screen and wrapper
-    document.getElementById("loading-screen").classList.add("hidden")
-    document.getElementById("loader-wrapper").classList.add("hidden")
-    //Remove flexbox so they dont take up space
-    document.getElementById("loading-screen").classList.remove("flexbox")
-    document.getElementById("loader-wrapper").classList.remove("flexbox")
-    document.getElementById("outer-loader").classList.remove("flexbox")
-    document.getElementById("middle-loader").classList.remove("flexbox")
-    document.getElementById("inner-loader").classList.remove("flexbox")
+    data.loaderDisplay = `hidden` 
     //Show main page
-    document.getElementById("page-content").classList.remove("hidden")
-    //Remove whit-bg class from body
+    data.contentDisplay = ``
+    //Remove white-bg class from body
     document.getElementById(`body`).classList.remove(`white-bg`)
   }, 1); /*This is the delay which can be increased for testing and is 1ms by default*/
 }
@@ -60,6 +52,7 @@ function toggleMode()
 }
 function setMode(targetMode)
 {
+  //Set light mode colour scheme
   if (targetMode == `light`)
   {
     //Changing each variable
@@ -69,6 +62,7 @@ function setMode(targetMode)
     root.style.setProperty(`--accent-2`, `transparent`);
     root.style.setProperty(`--text`, `black`);
   } 
+  //Set dark mode colour scheme
   else if (targetMode == `dark`)
   {
     //Changing each variable
